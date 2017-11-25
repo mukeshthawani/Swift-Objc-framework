@@ -10,6 +10,7 @@
 		8B6785AC1FC94A5B007976BC /* DemoObjectiveCFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6785A21FC94A5B007976BC /* DemoObjectiveCFramework.framework */; };
 		8B6785B11FC94A5B007976BC /* DemoObjectiveCFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6785B01FC94A5B007976BC /* DemoObjectiveCFrameworkTests.m */; };
 		8B6785B31FC94A5B007976BC /* DemoObjectiveCFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B6785A51FC94A5B007976BC /* DemoObjectiveCFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B6786041FC94D49007976BC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6786031FC94D49007976BC /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		8B6785AB1FC94A5B007976BC /* DemoObjectiveCFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoObjectiveCFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6785B01FC94A5B007976BC /* DemoObjectiveCFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoObjectiveCFrameworkTests.m; sourceTree = "<group>"; };
 		8B6785B21FC94A5B007976BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B6786031FC94D49007976BC /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		8B6785981FC94A5B007976BC = {
 			isa = PBXGroup;
 			children = (
+				8B6786051FC9506A007976BC /* Swift files */,
 				8B6785A41FC94A5B007976BC /* DemoObjectiveCFramework */,
 				8B6785AF1FC94A5B007976BC /* DemoObjectiveCFrameworkTests */,
 				8B6785A31FC94A5B007976BC /* Products */,
@@ -84,6 +87,14 @@
 				8B6785B21FC94A5B007976BC /* Info.plist */,
 			);
 			path = DemoObjectiveCFrameworkTests;
+			sourceTree = "<group>";
+		};
+		8B6786051FC9506A007976BC /* Swift files */ = {
+			isa = PBXGroup;
+			children = (
+				8B6786031FC94D49007976BC /* CustomView.swift */,
+			);
+			path = "Swift files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				TargetAttributes = {
 					8B6785A11FC94A5B007976BC = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 					};
 					8B6785AA1FC94A5B007976BC = {
@@ -195,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6786041FC94D49007976BC /* CustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +343,8 @@
 		8B6785B71FC94A5B007976BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -344,6 +359,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -351,6 +368,8 @@
 		8B6785B81FC94A5B007976BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -365,6 +384,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -372,6 +392,7 @@
 		8B6785BA1FC94A5B007976BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoObjectiveCFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -384,6 +405,7 @@
 		8B6785BB1FC94A5B007976BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoObjectiveCFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
